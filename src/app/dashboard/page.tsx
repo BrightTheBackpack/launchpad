@@ -12,7 +12,8 @@ interface DashboardProps {
   };
 }
 
-export default function Dashboard({ initialData }: DashboardProps): ReactElement | null {
+export default function Dashboard(props: DashboardProps = {}) {
+  const { initialData } = props;
   const router = useRouter();
   const { data: session, status } = useSession({
     required: true,
