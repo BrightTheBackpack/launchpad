@@ -1,6 +1,6 @@
 import NextAuth, { AuthOptions } from 'next-auth';
 import SlackProvider from 'next-auth/providers/slack';
-import { getUser } from '@/lib/airtable';
+import  { getUser }  from '@/lib/airtable';
 
 declare module 'next-auth' {
   interface Session {
