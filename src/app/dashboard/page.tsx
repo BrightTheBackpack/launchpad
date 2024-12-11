@@ -1,5 +1,5 @@
 'use client';
-
+import { ReactElement } from 'react';
 import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -12,7 +12,7 @@ interface DashboardProps {
   };
 }
 
-export default function Dashboard({ initialData }: DashboardProps) {
+export default function Dashboard({ initialData }: DashboardProps): ReactElement | null {
   const router = useRouter();
   const { data: session, status } = useSession({
     required: true,
